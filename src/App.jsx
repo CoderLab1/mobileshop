@@ -62,8 +62,6 @@ function App() {
 
 export default App 
 
-// user 
-
 export const ProtectedRoute = ({children}) => {
   const user = localStorage.getItem('user')
   if(user){
@@ -73,12 +71,10 @@ export const ProtectedRoute = ({children}) => {
   }
 }
 
-// admin 
-
 const ProtectedRouteForAdmin = ({children})=> {
   const admin = JSON.parse(localStorage.getItem('user'))
   
-  if(admin.user.email === 'knupadhyay784@gmail.com'){
+  if(admin.user.email === 'ashuyadav64393@gmail.com'){
     return children
   }
   else{

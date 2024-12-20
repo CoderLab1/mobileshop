@@ -15,8 +15,6 @@ function Navbar() {
 
   const user = JSON.parse(localStorage.getItem('user'));
 
-  // console.log(user.user.email)
-
   const logout = () => {
     localStorage.clear('user');
     window.location.href = '/login'
@@ -73,7 +71,7 @@ function Navbar() {
                     </Link>
                   </div> : ""}
 
-                  {user?.user?.email === "knupadhyay784@gmail.com" ? <div className="flow-root">
+                  {user?.user?.email === "ashuyadav64393@gmail.com" ? <div className="flow-root">
                     <Link to={'/dashboard'} className="-m-2 block p-2 font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>
                       admin
                     </Link>
@@ -115,9 +113,9 @@ function Navbar() {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-pink-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8" 
+        <p className="flex h-10 font-bold items-center justify-center bg-[#F0A130] px-4 text-sm text-black sm:px-6 lg:px-8" 
         style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
-          Get free delivery on orders over ₹300
+          Get free delivery on orders over ₹3000
         </p>
 
         <nav aria-label="Top" className="bg-gray-100 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
@@ -139,7 +137,7 @@ function Navbar() {
               <div className="ml-4 flex lg:ml-0">
                 <Link to={'/'} className='flex'>
                   <div className="flex ">
-                    <h1 className=' text-2xl font-bold text-black  px-2 py-1 rounded' style={{ color: mode === 'dark' ? 'white' : '', }}>E-Bharat</h1>
+                    <h1 className=' text-2xl font-bold text-black  px-2 py-1 rounded' style={{ color: mode === 'dark' ? 'white' : '', }}>Mobile Store</h1>
                   </div>
                 </Link>
               </div>
@@ -156,7 +154,7 @@ function Navbar() {
                       Signup
                     </Link>}
 
-                  {user?.user?.email === 'knupadhyay784@gmail.com' ? 
+                  {user?.user?.email === 'ashuyadav64393@gmail.com' ? 
                    <Link to={'/dashboard'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Admin
                   </Link> : ""}
@@ -180,8 +178,8 @@ function Navbar() {
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
-                      className="inline-block w-10 h-10 rounded-full"
-                      src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
+                      className="inline-block w-10 object-top obj-cover h-10 rounded-full"
+                      src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fHww"
                       alt="Dan_Abromov" />
                   </a>
                 </div>
@@ -189,9 +187,9 @@ function Navbar() {
                 <div className="flex lg:ml-6">
                   <button className='' onClick={toggleMode}>
                     {mode === 'light' ?
-                      (<FiSun className='' size={30} />
+                      (<FiSun className='' size={22} />
                       ) : 'dark' ?
-                        (<BsFillCloudSunFill size={30} />
+                        (<BsFillCloudSunFill size={22} />
                         ) : ''}
                   </button>
                 </div>
