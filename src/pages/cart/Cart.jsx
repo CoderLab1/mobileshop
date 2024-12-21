@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import myContext from '../../context/data/myContext';
+import myContext from '../../context/data/MyContext';
 import Layout from '../../components/layout/Layout';
 import Modal from '../../components/modal/Modal';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,7 +17,6 @@ function Cart() {
   const dispatch = useDispatch()
 
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems)
 
   const deleteCart = (item) => {
     dispatch(deleteFromCart(item));
@@ -36,7 +35,6 @@ function Cart() {
       temp = temp + parseInt(cartItem.price)
     })
     setTotalAmount(temp);
-    console.log(temp)
   }, [cartItems])
 
   const shipping = parseInt(100);

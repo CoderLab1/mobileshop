@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import MyContext from './myContext'
+import MyContext from './MyContext'
 import { Timestamp, addDoc, collection, deleteDoc, doc, getDocs, onSnapshot, orderBy, query, setDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { fireDB } from '../../fireabase/FirebaseConfig';
 
-function myState(props) {
+function Mystate(props) {
     const [mode, setMode] = useState('light');
 
     const toggleMode = () => {
@@ -148,7 +148,6 @@ function myState(props) {
                 setLoading(false)
             });
             setOrder(ordersArray);
-            console.log(ordersArray)
             setLoading(false);
         } catch (error) {
             console.log(error)
@@ -168,7 +167,6 @@ function myState(props) {
                 setLoading(false)
             });
             setUser(usersArray);
-            console.log(usersArray)
             setLoading(false);
         } catch (error) {
             console.log(error)
@@ -198,4 +196,4 @@ function myState(props) {
     )
 }
 
-export default myState
+export default Mystate
