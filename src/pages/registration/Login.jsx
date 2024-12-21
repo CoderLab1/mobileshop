@@ -1,13 +1,13 @@
 import { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import myContext from '../../context/data/MyContext'
+import MyContext from '../../context/data/MyContext'
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../fireabase/FirebaseConfig';
 import { toast } from 'react-toastify';
 import Loader from '../../components/loader/Loader';
 
 function Login() {
-    const context = useContext(myContext)
+    const context = useContext(MyContext)
     const {loading, setLoading} = context;
 
     const [email, setEmail] = useState('');

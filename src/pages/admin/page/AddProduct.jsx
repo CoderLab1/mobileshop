@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import myContext from '../../../context/data/MyContext'
+import MyContext from '../../../context/data/MyContext'
 
 function AddProduct() {
-    const context = useContext(myContext);
+    const context = useContext(MyContext);
     const { products, setProducts, addProduct } = context;
     return (
         <div>

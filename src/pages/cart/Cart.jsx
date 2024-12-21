@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import myContext from '../../context/data/MyContext';
+import MyContext from '../../context/data/MyContext';
 import Layout from '../../components/layout/Layout';
 import Modal from '../../components/modal/Modal';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,7 +11,7 @@ import { fireDB } from '../../fireabase/FirebaseConfig';
 
 function Cart() {
 
-  const context = useContext(myContext)
+  const context = useContext(MyContext)
   const { mode } = context;
 
   const dispatch = useDispatch()

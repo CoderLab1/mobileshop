@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import myContext from '../../context/data/MyContext'
+import MyContext from '../../context/data/MyContext'
 import Layout from '../../components/layout/Layout'
 import Loader from '../../components/loader/Loader'
 
 function Order() {
   const userid = JSON.parse(localStorage.getItem('user')).user.uid
-  const context = useContext(myContext)
+  const context = useContext(MyContext)
   const { mode, loading, order } = context
   return (
     <Layout>

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import myContext from '../../context/data/MyContext'
+import MyContext from '../../context/data/MyContext'
 import { Link } from 'react-router-dom';
 
 function Footer() {
-  const context = useContext(myContext);
+  const context = useContext(MyContext);
   const { mode } = context;
   return (
     <div>
